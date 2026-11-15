@@ -1,0 +1,31 @@
+{
+  "name": "neon-sign-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "浏览器内霓虹灯牌设计预览系统",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test:algo": "esbuild test/algo.test.ts --bundle --platform=node --format=esm --outfile=test/.build/algo.test.mjs && node test/.build/algo.test.mjs",
+    "test:contour": "esbuild test/contour.test.ts --bundle --platform=node --format=esm --outfile=test/.build/contour.test.mjs && node test/.build/contour.test.mjs",
+    "test": "npm run test:algo && npm run test:contour"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
+    "three": "^0.169.0",
+    "zustand": "^4.5.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/three": "^0.169.0",
+    "@vitejs/plugin-react": "^4.3.3",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  }
+}
